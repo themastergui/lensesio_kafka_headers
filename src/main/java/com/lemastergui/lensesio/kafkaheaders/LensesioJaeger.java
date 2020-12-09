@@ -26,14 +26,15 @@ public class LensesioJaeger {
     }
 
     public static void main(String[] args) {
-        if (args.length != 1) {
-            throw new IllegalArgumentException("Expecting one argument");
+        if (args.length != 2) {
+            throw new IllegalArgumentException("Expecting two arguments: Kafka Broker (eg: mybroker.com:9092) & message string");
         }
 
-        String message = args[0];
+        String broker = args[0];
+        String message = args[1];
         //JaegerTracer tracer = getTracer("lenses.io_test");
         try (JaegerTracer tracer = initTracer("lenses.io_test")) {
-            new LensesioJaeger(tracer).sendMessage(message);
+            new LensesioJaeger(tracer).sendMessage(broker, message);
         }
     }
 
@@ -44,10 +45,10 @@ public class LensesioJaeger {
         return config.getTracer();
     }
 
-    private static KafkaProducer<String, String> createProducer() {
+    private static KafkaProducer<String, String> createProducer(String broker) {
 
         final Properties kafkaProperties = new Properties();
-        kafkaProperties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "35.180.136.176:9092");
+        kafkaProperties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, broker);
         kafkaProperties.put("enable.auto.commit", "false");
         kafkaProperties.put("group.id", "payments_processing");
         kafkaProperties.put("key.serializer", StringSerializer.class.getName());
@@ -55,9 +56,9 @@ public class LensesioJaeger {
         return new KafkaProducer<>(kafkaProperties);
     }
 
-    public void sendMessage(String message) {
+    public void sendMessage(String broker, String message) {
         try {
-            KafkaProducer<String, String> kafkaProducer = createProducer();
+            KafkaProducer<String, String> kafkaProducer = createProducer(broker);
             TracingKafkaProducer producer = new TracingKafkaProducer(kafkaProducer, tracer);
             Span span = tracer.buildSpan("sendMessage").start();
             try (Scope scope = tracer.scopeManager().activate(span)) {

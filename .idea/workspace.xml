@@ -4,7 +4,6 @@
     <list default="true" id="98efc728-568e-4990-b5fb-b802850829f8" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../Axual/src/main/java/io.thedatadifference.axual/AxualPaymentsSimulatorApp.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Axual/src/main/java/io/thedatadifference/axual/unit/AxualPaymentsSimulatorAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LensesioJaeger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsService.java" afterDir="false" />
@@ -12,6 +11,8 @@
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsSimulatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/PaymentsSimulatorApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/SuspiciousPaymentsServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lenses-topology-example-microservice/src/main/java/io/lenses/topology/example/microservice/SuspiciousPaymentsServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemastergui/lensesio/kafkaheaders/LensesioJaeger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemastergui/lensesio/kafkaheaders/LensesioJaeger.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,7 +39,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LensesioJaeger.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemastergui/lensesio/kafkaheaders/LensesioJaeger.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="8" selection-start-column="8" selection-end-column="45" />
@@ -52,13 +53,14 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/LensesioJaeger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemastergui/lensesio/kafkaheaders/LensesioJaeger.java" />
       </list>
     </option>
   </component>
@@ -100,6 +102,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lensesioHeaders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lensesioHeaders" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kafkaheaders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -139,7 +149,7 @@
     <configuration name="LensesioJaeger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lemastergui.lensesio.kafkaheaders.LensesioJaeger" />
       <module name="lensesioHeaders" />
-      <option name="PROGRAM_PARAMETERS" value="hello" />
+      <option name="PROGRAM_PARAMETERS" value="35.180.136.176:9092 hello" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lemastergui.lensesio.kafkaheaders.*" />
@@ -179,13 +189,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1417" height="831" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32894737" />
       <window_info anchor="bottom" id="Docker" />
@@ -195,7 +206,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.60657895" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34078947" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -220,7 +231,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LensesioJaeger.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemastergui/lensesio/kafkaheaders/LensesioJaeger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="45" />
